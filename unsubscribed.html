@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Unsubscribe</title>
+  <style>
+    body{margin:0;font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:#0f172a;color:#e5e7eb;display:grid;place-items:center;min-height:100vh}
+    .card{max-width:680px;margin:24px;background:#111827;border:1px solid #334155;border-radius:16px;padding:24px}
+    h1{margin:0 0 8px;font-size:28px}
+    p{margin:8px 0;line-height:1.6;color:#cbd5e1}
+    a{color:#60a5fa;text-decoration:none}
+  </style>
+  <script>
+    // Read ?status=ok|notfound|error and adjust message
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(location.search);
+      const status = params.get('status') || 'ok';
+      const h = document.getElementById('h');
+      const m = document.getElementById('m');
+
+      if (status === 'ok') {
+        h.textContent = "You're unsubscribed";
+        m.textContent = "We've removed you from the list. Sorry to see you go.";
+      } else if (status === 'notfound') {
+        h.textContent = "You're already unsubscribed";
+        m.textContent = "We couldn't find an active subscription for that link.";
+      } else {
+        h.textContent = "Something went wrong";
+        m.textContent = "Please try the link again later or contact us.";
+      }
+    });
+  </script>
+</head>
+<body>
+  <main class="card">
+    <h1 id="h">Unsubscribe</h1>
+    <p id="m">Updating your subscription status…</p>
+    <p><a href="/">Return to the site</a></p>
+  </main>
+</body>
+</html>

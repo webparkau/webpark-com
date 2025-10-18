@@ -1,0 +1,6 @@
+# Ignore sensitive or environment-specific files
+.htaccess
+.env
+/vendor/
+/node_modules/
+/waitlist/

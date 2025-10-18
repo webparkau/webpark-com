@@ -1,0 +1,9 @@
+# robots.txt for WebPark
+User-agent: *
+Disallow: /save.php
+Disallow: /confirm.php
+Disallow: /unsubscribe.php
+Allow: /
+
+# Point search engines to the sitemap
+Sitemap: https://webpark.com.au/sitemap.xml
