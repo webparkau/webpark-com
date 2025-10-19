@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="640" height="200" viewBox="0 0 640 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Colors -->
+  <defs>
+    <style>
+      .navy{fill:#0b1a33}
+      .blue{fill:#1f73ff}
+      .green{fill:#21b573}
+      .red{fill:#ef3e36}
+    </style>
+  </defs>
+
+  <!-- Icon block (approximation of your GitHub logo) -->
+  <g transform="translate(20,20)">
+    <!-- top-left blue arrow -->
+    <path class="blue" d="M0,36 L36,0 L36,20 L86,20 L86,52 L36,52 L36,72 Z"/>
+    <!-- top-right green rounded square -->
+    <rect class="green" x="98" y="0" rx="18" ry="18" width="72" height="72"/>
+    <!-- bottom-left red arrow -->
+    <path class="red" d="M0,92 L36,128 L36,108 L86,108 L86,76 L36,76 L36,56 Z"/>
+    <!-- bottom-right green leaf / quarter circle -->
+    <path class="green" d="M98,76 h40 a34,34 0 0 1 34,34 v40 h-40 a34,34 0 0 1 -34,-34 z"/>
+  </g>
+
+  <!-- Wordmark -->
+  <g transform="translate(220,120)">
+    <text class="navy" font-family="Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="68" font-weight="800">WebPark</text>
+  </g>
+</svg>

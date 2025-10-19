@@ -16,10 +16,10 @@ if (empty($_SESSION['csrf'])) { $_SESSION['csrf'] = bin2hex(random_bytes(16)); }
   <meta name="robots" content="index,follow" />
 
   <!-- Icons -->
-  <link rel="icon" href="/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="/assets/favicon.ico" sizes="32x32">
   <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-  <meta name="theme-color" content="#0f172a">
+  <meta name="theme-color" content="#FFD54F">
   <link rel="mask-icon" href="/assets/logo.svg" color="#0f172a">
 
   <!-- Open Graph -->
@@ -67,7 +67,7 @@ if (empty($_SESSION['csrf'])) { $_SESSION['csrf'] = bin2hex(random_bytes(16)); }
     .card{width:min(1000px,94vw);background:rgba(17,24,39,.75);backdrop-filter:blur(6px);border:1px solid var(--border);border-radius:18px;padding:28px 28px 22px;box-shadow:0 12px 30px rgba(0,0,0,.25)}
     header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
     .brand{display:flex;align-items:center;gap:10px}
-    .brand img{width:28px;height:28px}
+    .brand img{width:auto;height:48px}
     .tag{border:1px solid var(--border);color:var(--muted);padding:6px 10px;border-radius:999px;font-size:13px}
     h1{margin:10px 0 6px;font-size:clamp(26px,4vw,40px)}
     p{margin:8px 0;line-height:1.6}
@@ -92,11 +92,11 @@ if (empty($_SESSION['csrf'])) { $_SESSION['csrf'] = bin2hex(random_bytes(16)); }
   <main class="wrap">
     <section class="card" aria-label="WebPark landing">
       <header>
-        <div class="brand">
-          <img src="/assets/logo.svg" alt="WebPark logo" width="28" height="28" />
-          <strong>WebPark</strong>
-        </div>
-        <span class="tag">Perth • Venture Studio</span>
+        <a class="brand" href="/" aria-label="WebPark home">
+          <img src="/assets/logo.svg" alt="WebPark logo" />
+    <strong>WebPark</strong>
+        </a>
+    <span class="tag">Perth • Venture Studio</span>
       </header>
 
       <h1>We build small useful products then scale what customers love.</h1>
@@ -152,6 +152,15 @@ if (empty($_SESSION['csrf'])) { $_SESSION['csrf'] = bin2hex(random_bytes(16)); }
         <button type="submit">Notify Me</button>
       </form>
       <p class="fine">Low volume. Double opt in. Unsubscribe anytime.</p>
+
+<div class="section" id="about">
+  <div class="sub">About WebPark</div>
+  <p class="muted">
+    WebPark Pty Ltd (ABN 82 155 731 981) is a Perth based venture studio building AI tools, fintech utilities, 
+    and focused consumer products. We combine design, data, and engineering to launch small, useful applications 
+    and scale the ones that deliver measurable value.
+  </p>
+</div>
 
 <!-- Footer -->
 <div class="footer">
